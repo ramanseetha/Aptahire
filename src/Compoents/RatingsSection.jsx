@@ -46,7 +46,7 @@ export default function RatingsSection() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-slate-50 to-white py-16 sm:py-20 lg:py-28">
+    <section className="bg-gradient-to-b from-slate-50 to-white py-16 lg:py-18">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -97,16 +97,25 @@ export default function RatingsSection() {
 
         {/* CTA */}
         <div className="text-center">
-          <a 
-            href="#final-cta"
-            className="inline-flex items-center px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white text-lg font-bold rounded-xl shadow-xl transform hover:scale-105 transition-all duration-200"
-          >
-            See Why Top Recruitment Brands Rate Us Five Stars
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+         
+           <button
+  className="mt-10 inline-flex items-center justify-center
+             px-10 py-4 rounded-xl
+             text-base sm:text-2xl font-semibold
+             bg-gradient-to-r from-purple-600 to-indigo-600
+             text-white
+             shadow-xl
+             transform transition-all duration-300 ease-in-out
+             hover:scale-105
+             hover:shadow-2xl
+             hover:from-pink-500 hover:to-purple-600
+             active:scale-95">
+ See Why Top Recruitment Brands Rate Us Five Stars
+ <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </a>
-          <p className="text-slate-600 mt-4 text-sm sm:text-base">
+</button>
+          <p className="text-slate-600 mt-4 text-sm sm:text-xl">
             Discover the edge teams gain with AI screening.
           </p>
         </div>

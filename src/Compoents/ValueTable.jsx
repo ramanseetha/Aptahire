@@ -28,14 +28,14 @@ export default function ValueTable() {
   ];
 
   return (
-    <section className="bg-white py-16 sm:py-20 lg:py-28">
+    <section className="bg-white py-16 sm:py-20 lg:py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
             Your Expectations, Exceeded
           </h2>
-          <p className="text-lg sm:text-xl text-slate-600">
+          <p className="text-lg sm:text-xl text-slate-600 font-normal">
             Built for teams where every vacancy hits revenue.
           </p>
         </div>
@@ -81,17 +81,23 @@ export default function ValueTable() {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-10">
-          <a 
-            href="#final-cta"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg font-bold rounded-xl shadow-xl transform hover:scale-105 transition-all duration-200"
-          >
-            Upgrade Every Submission To 'Wow, Not Meh'
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </a>
-          <p className="text-slate-600 mt-4 text-sm sm:text-base">
+        <div className="text-center mt-4">
+         
+           <button
+  className="mt-10 inline-flex items-center justify-center
+             px-10 py-4 rounded-xl
+             text-base sm:text-2xl font-semibold
+             bg-gradient-to-r from-purple-600 to-indigo-600
+             text-white
+             shadow-xl
+             transform transition-all duration-300 ease-in-out
+             hover:scale-105
+             hover:shadow-2xl
+             hover:from-pink-500 hover:to-purple-600
+             active:scale-95">
+  Upgrade Every Submission To 'Wow, Not Meh'
+</button>
+          <p className="text-slate-600 mt-4 text-sm sm:text-xl">
             Approve interview-backed, report-ready hires before competitors even react.
           </p>
         </div>

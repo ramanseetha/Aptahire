@@ -7,24 +7,28 @@ export default function ObjectionHandling() {
   const objections = [
     {
       worry: 'Will AI send low-quality candidates to clients?',
-      answer: 'No. Every shortlist is backed by structured interviews, transcripts, and recruiter-defined pass criteria.'
+      answer: 'No. Every shortlist is backed by structured interviews, transcripts, and recruiter-defined pass criteria.',
+      number: 1
     },
     {
       worry: 'Will we lose control over who gets shortlisted?',
-      answer: 'Never. Recruiters control questions, thresholds, scoring logic, and final approval.'
+      answer: 'Never. Recruiters control questions, thresholds, scoring logic, and final approval.',
+      number: 2
     },
     {
       worry: 'Will candidates hate the experience?',
-      answer: 'Aptahire uses natural, human-sounding conversations in 20+ languages—no robotic scripts or confusing bots.'
+      answer: 'Aptahire uses natural, human-sounding conversations in 20+ languages-no robotic scripts or confusing bots.',
+      number: 3
     },
     {
       worry: 'Will this hurt our fees or positioning?',
-      answer: 'Agencies use Aptahire to defend margins, not discount—by submitting stronger candidates faster with proof.'
+      answer: 'Agencies use Aptahire to defend margins, not discount-by submitting stronger candidates faster with proof.',
+      number: 4
     }
   ];
 
   return (
-    <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-16 sm:py-20 lg:py-28">
+    <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-16 sm:py-16 ">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -53,8 +57,8 @@ export default function ObjectionHandling() {
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <span className="flex items-center justify-center w-8 h-8 rounded-full bg-red-500/20 text-red-300 text-xl font-bold">
-                    ?
+                  <span className="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-300 text-2xl font-bold">
+                    {item.number}
                   </span>
                 </div>
                 <div>
@@ -62,7 +66,7 @@ export default function ObjectionHandling() {
                     {item.worry}
                   </p>
                   <p className="text-slate-300 leading-relaxed">
-                    <span className="text-green-400 font-semibold mr-1">→</span>
+                    <span className="text-green-400 font-semibold mr-1 text-lg sm:text-xl">→</span>
                     {item.answer}
                   </p>
                 </div>
@@ -83,16 +87,27 @@ export default function ObjectionHandling() {
 
         {/* CTA */}
         <div className="text-center">
-          <a 
-            href="#final-cta"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-lg font-bold rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-200"
-          >
-            See How Aptahire Fits Your Exact Hiring Flow
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        
+
+           <button
+  className="mt-10 inline-flex items-center justify-center
+             px-10 py-4 rounded-xl
+             text-base sm:text-2xl font-semibold
+             bg-gradient-to-r from-purple-600 to-indigo-600
+             text-white
+             shadow-xl
+             transform transition-all duration-300 ease-in-out
+             hover:scale-105
+             hover:shadow-2xl
+             hover:from-pink-500 hover:to-purple-600
+             active:scale-95">
+ See How Aptahire Fits Your Exact Hiring Flow
+
+ <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </a>
-          <p className="text-slate-300 mt-4 text-sm sm:text-base">
+</button>
+          <p className="text-slate-300 mt-4 text-sm sm:text-xl">
             Go live in weeks; don't wait while top talent disappears.
           </p>
         </div>

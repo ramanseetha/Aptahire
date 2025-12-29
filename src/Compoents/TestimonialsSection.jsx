@@ -2,6 +2,10 @@
  * TestimonialsSection Component
  * Displays customer testimonials with ratings and company info
  */
+import React from 'react';
+import image1 from '../assets/5.png';
+import image2 from '../assets/3.png';
+import image3 from '../assets/8.png';
 
 export default function TestimonialsSection() {
   const testimonials = [
@@ -11,6 +15,7 @@ export default function TestimonialsSection() {
       company: 'Sterling Talent Solutions',
       rating: 5,
       date: '14th Nov, 2025',
+      profilePic: image1, // Corrected profile picture reference
       quote: '100% recommend Aptahire for any agency trying to protect margins without slashing quality. We went from spending 12 hours per role on screening and scheduling to under 2 hours. The AI handles the grunt work, and my team focuses on closing. Our speed-to-submission dropped from 5 days to under 24 hours, and clients are noticing.'
     },
     {
@@ -19,6 +24,7 @@ export default function TestimonialsSection() {
       company: 'TechVentures Asia',
       rating: 5,
       date: '22nd Oct, 2025',
+      profilePic: image2, // Corrected profile picture reference
       quote: 'Brilliant tool! Being someone who was skeptical about AI interviews, Aptahire\'s cheat detection and candidate ranking changed my mind completely. The detailed reports give us confidence we\'re not missing great people buried in 500+ applications. Support is phenomenal; they walked us through integration in under a week. Absolute must-have if you\'re hiring at scale!'
     },
     {
@@ -27,6 +33,7 @@ export default function TestimonialsSection() {
       company: 'GlobalHire Partners',
       rating: 5,
       date: '8th Dec, 2025',
+      profilePic: image3, // Corrected profile picture reference
       quote: 'The setup is straightforward and takes a lot of hassle out of trying to juggle 15 open roles at once. Before Aptahire, I was drowning in admin reformatting CVs, chasing no-shows, manually scheduling. Now the AI does the heavy lifting and I spend time on relationship building and offer negotiations. I would recommend this to any recruiter or agency juggling volume and speed!'
     }
   ];
@@ -42,8 +49,8 @@ export default function TestimonialsSection() {
   );
 
   return (
-    <section className="bg-gradient-to-b from-slate-50 to-white py-16 sm:py-20 lg:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-gradient-to-b from-slate-50 to-white py-16 sm:py-20 lg:py-12">
+      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
@@ -69,34 +76,45 @@ export default function TestimonialsSection() {
               key={index}
               className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200 hover:shadow-2xl transition-shadow duration-300 flex flex-col"
             >
+              <div className="flex items-center gap-4 mb-4">
+                <img
+                  src={testimonial.profilePic}
+                  alt={`${testimonial.name}'s profile`}
+                  className="w-12 h-12 rounded-full border border-slate-200 shadow-sm"
+                />
+                <div>
+                  <p className="font-bold text-slate-900">{testimonial.name}</p>
+                  <p className="text-sm text-slate-600">{testimonial.role}</p>
+                  <p className="text-sm text-blue-600 font-semibold">{testimonial.company}</p>
+                </div>
+              </div>
               <StarRating rating={testimonial.rating} />
-              
               <p className="text-slate-700 leading-relaxed mb-6 flex-grow">
                 "{testimonial.quote}"
               </p>
-              
-              <div className="border-t border-slate-200 pt-4">
-                <p className="font-bold text-slate-900">{testimonial.name}</p>
-                <p className="text-sm text-slate-600">{testimonial.role}</p>
-                <p className="text-sm text-blue-600 font-semibold">{testimonial.company}</p>
-                <p className="text-xs text-slate-500 mt-2">{testimonial.date}</p>
-              </div>
+              <p className="text-xs lg:text-base text-slate-500 mt-2">{testimonial.date}</p>
             </div>
           ))}
         </div>
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <a 
-            href="#final-cta"
-            className="inline-flex items-center px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white text-lg font-bold rounded-xl shadow-xl transform hover:scale-105 transition-all duration-200"
-          >
-            Join 500+ Teams Already Hiring Smarter With AI
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </a>
-          <p className="text-slate-600 mt-4 text-sm sm:text-base">
+          
+           <button
+  className="mt-10 inline-flex items-center justify-center
+             px-10 py-4 rounded-xl
+             text-base sm:text-2xl font-semibold
+             bg-gradient-to-r from-purple-600 to-indigo-600
+             text-white
+             shadow-xl
+             transform transition-all duration-300 ease-in-out
+             hover:scale-105
+             hover:shadow-2xl
+             hover:from-pink-500 hover:to-purple-600
+             active:scale-95">
+ Join 500+ Teams Already Hiring Smarter With AI
+</button>
+          <p className="text-slate-600 mt-4 text-sm sm:text-xl">
             Don't let lean teams outpace you on enterprise volume.
           </p>
         </div>

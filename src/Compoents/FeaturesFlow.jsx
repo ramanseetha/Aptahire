@@ -18,7 +18,7 @@ export default function FeaturesFlow() {
     {
       number: '03',
       title: 'Analyze',
-      description: 'Review conversational interview transcripts, structured answers, cheat-detection signals, and AI-generated reports in one dashboard—filtered by role, round, and language.'
+      description: 'Review conversational interview transcripts, structured answers, cheat-detection signals, and AI-generated reports in one dashboard-filtered by role, round, and language.'
     },
     {
       number: '04',
@@ -32,17 +32,17 @@ export default function FeaturesFlow() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl  lg:text-5xl font-bold text-slate-900 mb-4 leading-snug">
             Building Shortlists Your Clients Actually Approve
             <span className="block mt-2 text-blue-600">Now Effortless</span>
           </h2>
-          <p className="text-lg sm:text-xl text-slate-600 mt-4">
+          <p className="text-lg sm:text-xl text-slate-600 mt-4 font-bold">
             One intelligent platform to:
           </p>
         </div>
 
         {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12 mouse-hover">
           {features.map((feature, index) => (
             <div 
               key={index}
@@ -69,15 +69,21 @@ export default function FeaturesFlow() {
 
         {/* CTA Button */}
         <div className="text-center">
-          <a 
-            href="#final-cta"
-            className="inline-flex items-center px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white text-lg font-bold rounded-xl shadow-xl transform hover:scale-105 transition-all duration-200"
-          >
-            Turn Messy Talent Pools Into Client-Ready Shortlists
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
+          
+          <button
+  className="mt-10 inline-flex items-center justify-center
+             px-10 py-4 rounded-xl
+             text-base sm:text-2xl font-semibold
+             bg-gradient-to-r from-purple-600 to-indigo-600
+             text-white
+             shadow-xl
+             transform transition-all duration-300 ease-in-out
+             hover:scale-105
+             hover:shadow-2xl
+             hover:from-pink-500 hover:to-purple-600
+             active:scale-95">
+   Turn Messy Talent Pools Into Client-Ready Shortlists
+</button>
           <p className="text-slate-600 mt-4 text-sm sm:text-base">
             Convert multi-round, multilingual interviews into confident hiring decisions faster.
           </p>

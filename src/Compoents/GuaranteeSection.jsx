@@ -5,7 +5,7 @@
 
 export default function GuaranteeSection() {
   return (
-    <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 text-white py-16 sm:py-20 lg:py-28">
+    <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 text-white py-16 lg:py-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Badge */}
         <div className="flex justify-center mb-8">

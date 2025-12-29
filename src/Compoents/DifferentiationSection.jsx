@@ -5,7 +5,7 @@
 
 export default function DifferentiationSection() {
   return (
-    <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-16 sm:py-20 lg:py-28">
+    <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-16 sm:py-20 lg:py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -31,16 +31,25 @@ export default function DifferentiationSection() {
 
         {/* CTA */}
         <div className="text-center">
-          <a 
-            href="#final-cta"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white text-lg font-bold rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-200"
-          >
-            Let An Always-On AI Recruiter Work For You
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          
+           <button
+  className="mt-10 inline-flex items-center justify-center
+             px-10 py-4 rounded-xl
+             text-base sm:text-2xl font-semibold
+             bg-gradient-to-r from-purple-600 to-indigo-600
+             text-white
+             shadow-xl
+             transform transition-all duration-300 ease-in-out
+             hover:scale-105
+             hover:shadow-2xl
+             hover:from-pink-500 hover:to-purple-600
+             active:scale-95">
+  Let An Always-On AI Recruiter Work For You
+  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </a>
-          <p className="text-slate-300 mt-4 text-sm sm:text-base">
+</button>
+          <p className="text-slate-300 mt-4 text-sm sm:text-xl">
             Don't let faster competitors steal your best candidates
           </p>
         </div>
